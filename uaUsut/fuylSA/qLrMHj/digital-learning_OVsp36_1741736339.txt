@@ -5,7 +5,6 @@ This licence (the “Licence”) operates as a wraparound licence to the Apache 
 
 1. The definitions set out in the Apache License are modified as follows:
 
-Copyright any reference to ‘copyright’ (whether capitalised or not) includes ‘Rights’ (as defined below).
 
 Contribution also includes any design, as well as any work of authorship.
 
