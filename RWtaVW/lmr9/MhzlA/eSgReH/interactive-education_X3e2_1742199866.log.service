@@ -10,6 +10,5 @@ ExecStart=/opt/codapi/codapi
 Restart=on-failure
 StandardOutput=file:/opt/codapi/codapi.log
 StandardError=file:/opt/codapi/codapi.log
-
 [Install]
 WantedBy=multi-user.target
