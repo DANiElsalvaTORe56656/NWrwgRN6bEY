@@ -1,6 +1,0 @@
-disallowed-names = [
-    "e", # no single letter error bindings
-disallowed-methods = [
-    "std::cell::RefCell::default()",
-    "std::rc::Rc::default()",
-]
