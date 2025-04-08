@@ -268,7 +268,6 @@ else
       -DWITH_CONSENSUS_REPLICATION=1
 
 fi
-
 make -j$(nproc)
 
 # set mtr binary directory
