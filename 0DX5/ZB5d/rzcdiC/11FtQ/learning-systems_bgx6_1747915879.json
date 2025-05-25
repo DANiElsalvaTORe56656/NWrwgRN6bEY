@@ -9,7 +9,6 @@
     "content/exercises.md"
   ],
   "builds" : [
-    {
       "format" : "pdf",
       "layout" : "layouts/pdf.html",
       "stylesheets" : {
