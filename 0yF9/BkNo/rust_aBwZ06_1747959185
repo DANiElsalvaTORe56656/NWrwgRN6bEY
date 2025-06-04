@@ -20,6 +20,5 @@ COPY en/docs ./build/en/docs
 COPY en/mkdocs.yml ./en/mkdocs.yml
 RUN mkdocs build -f ./en/mkdocs.yml
 
-WORKDIR /hello-algo/site
 EXPOSE 8000
 CMD ["python", "-m", "http.server", "8000"]
