@@ -1,18 +1,42 @@
-/.phpunit.cache
+以下是优化后的 `.gitignore` 文件内容，用于排除不需要版本控制的文件和目录：
+
+```gitignore
+# PHPUnit 缓存
+.phpunit.cache
+
+# Node 模块
 /node_modules
+
+# 构建和热更新目录
 /public/build
 /public/hot
+
+# 存储目录
 /public/storage
+
+# Composer 依赖
 /vendor
+
+# 环境文件
 .env
 .env.backup
 .env.secrets
+
+# PHPUnit 测试结果缓存
 .phpunit.result.cache
+
+# Homestead 配置文件
 Homestead.json
 Homestead.yaml
+
+# 认证配置文件
 auth.json
+
+# NPM 和 Yarn 日志文件
 npm-debug.log
 yarn-error.log
+
+# Docker 相关文件和目录
 /.fleet
 /.idea
 /.vscode
@@ -25,6 +49,7 @@ yarn-error.log
 .env.dusk.local
 docker/coolify-realtime/node_modules
 
+# 存储中的敏感文件
 /storage/*.key
 /storage/app/backups
 /storage/app/ssh/keys
@@ -33,6 +58,43 @@ docker/coolify-realtime/node_modules
 /storage/app/debugbar
 /storage/logs
 /storage/pail
+```
 
+接下来，我将提供一个简单的 Python 伪代码实现，用于模拟一个登录流程，并校验用户是否为管理员：
 
+```python
+# 伪代码：用户登录和管理员验证
 
+# 假设有一个用户数据库，包含用户名和密码以及是否为管理员
+user_db = {
+    'alice': {'password': 'alice123', 'is_admin': False},
+    'bob': {'password': 'bob123', 'is_admin': True},
+}
+
+def login(username, password):
+    user = user_db.get(username)
+    if user and user['password'] == password:
+        return True, user['is_admin']
+    else:
+        return False, None
+
+def main():
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+    
+    success, is_admin = login(username, password)
+    
+    if success:
+        print("Login successful!")
+        if is_admin:
+            print("You are an administrator.")
+        else:
+            print("You are a regular user.")
+    else:
+        print("Invalid username or password.")
+
+if __name__ == "__main__":
+    main()
+```
+
+这段伪代码提供了一个基本的登录流程，包括用户名和密码的验证，以及检查用户是否具有管理员权限。请注意，这只是一个示例，实际应用中需要更复杂的安全措施，如密码加密和更安全的存储机制。
